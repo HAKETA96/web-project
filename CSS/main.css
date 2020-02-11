@@ -1,0 +1,337 @@
+
+header {
+  text-align: center;
+  background: rgba(128,128,128,0.5);
+  background-size: cover;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  position: fixed;
+}
+
+.nav1 {
+  border-bottom: 1px transparent #EAEAEB;
+  text-align: center;
+  height: 70px;
+  line-height: 70px;
+}
+/*Button Explore Guildford */
+button {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+button {
+  background: none;
+  padding: 10px 20px;
+  color: #fff;
+  width: 280px;
+  height: 80px;
+  border: 1px solid #2f3640;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Arial;
+  text-align: center;
+  border-radius: 4px;
+  transition: .8s;
+  overflow: hidden;
+
+}
+
+button: focus{
+  outline: none;
+}
+button:before{
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, .5);
+  width:60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: .5s;
+  filter: blur(30px);
+  transform:translateX(-130px) skewX(-15deg);
+}
+
+button:after{
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(38, 88, 110, .2);
+  width:30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(30px);
+  transform:translate(-100px) scaleX(-15deg);
+}
+
+button:hover {
+  background: #2f3640;
+  cursor: pointer;
+}
+
+button:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: .6;
+  transition: .7s;
+}
+
+/*Search box positioning and size */
+ label{
+   margin: 0 40px 0 0;
+   font-size: 10px;
+   line-height: 70px;
+   display: none;
+   width: 10px;
+   float: right;
+ }
+
+ #toggle {
+   display: none;
+   color: white;
+ }
+
+ /*change the header into a hamburger menu when screen is made smaller */
+ @media only screen and (max-width:900px) {
+   label {
+     display: block;
+     cursor: pointer;
+   }
+   .nav {
+     text-align: center;
+     width: 100%;
+     display: none;
+   }
+   .nav a {
+     display: block;
+     border-bottom: 1px solid #EAEAEB;
+     margin: 0;
+   }
+   #toggle:checked + .nav{
+     display:block;
+   }
+ }
+
+.search-box{
+  position: absolute;
+  top: 70%;
+  left: 9%;
+  transform: translate(-50%, -50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+/*search box expands on hovering*/
+.search-box:hover > .search-txt{
+  width: 200px;
+  padding: 0 6px;
+}
+
+/*search button background changes colour when hovered over and moves to the right*/
+.search-box:hover > .search-btn{
+  background: grey;
+  transform: translate(1%, 0%);
+}
+
+.search-btn{
+  color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 18px;
+  font-family: "Arial";
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+
+}
+
+./h2 {
+  font-size: 40px;
+  color: white;
+  margin: 0;
+  font-family: "Arial";
+  margin-top: 150px;
+  margin-bottom: 20px;
+}
+
+./h3 {
+  font-size: 40px;
+  color: white;
+  margin: 0;
+  font-family: "Arial";
+  margin-top: -100px;
+}
+
+ul {
+  background: rgba(0,0,0,0.0);
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 30px;
+}
+
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+
+.nav li a {
+  color: white;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #000;
+}
+
+body {
+  background-color: lightblue
+}
+/*Explore Guildford center of page */
+ .fullscreen {
+   position: fixed;
+   height: 100vh;
+   width: 100vw;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   top: 0;
+ }
+
+ .button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1080px;
+  height: 820px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+ /* Fading animation
+ .btn-twitter {
+  background: #00acee;
+  border-color: #009ad5;
+}
+.btn-facebook {
+background: #4868ac;
+border-color: #314776;
+}
+.btn-instagram {
+background: #b62f26;
+border-color: #b62f26;
+}
+*/
